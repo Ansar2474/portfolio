@@ -177,5 +177,33 @@
         </div>
         <div class="u-border-3 u-border-grey-dark-1 u-expanded-width-xs u-hidden-lg u-hidden-md u-hidden-sm u-hidden-xl u-shape u-shape-bottom u-shape-left u-shape-line u-shape-right u-shape-1"></div>
       </div></footer>
-  
+ <script>
+window.addEventListener('load', function() {
+    var forms = document.querySelectorAll('form');
+    forms.forEach(function(form) {
+        //<form action="https://api.web3forms.com/submit" method="POST">
+  <input type="hidden" name="access_key" value="72719af3-17e2-465c-a8e8-cdabef4035ec">
+  <input type="text" name="name" required>
+  <input type="email" name="email" required>
+  <textarea name="message" required></textarea>
+  <button type="submit">Submit</button>
+</form>
+        form.setAttribute('action', 'https://api.web3forms.com/submit');
+        
+        //72719af3-17e2-465c-a8e8-cdabef4035ec
+        var keyInput = document.createElement('input');
+        keyInput.type = 'hidden';
+        keyInput.name = 'access_key';
+        keyInput.value = 'YOUR_KEY_HERE'; // 72719af3-17e2-465c-a8e8-cdabef4035ec
+        form.appendChild(keyInput);
+
+        // 'https://ansar.me/thanks-you-page.html'
+        var redirectInput = document.createElement('input');
+        redirectInput.type = 'hidden';
+        redirectInput.name = 'redirect';
+        redirectInput.value = 'https://ansar.me/thanks-you-page.html';
+        form.appendChild(redirectInput);
+    });
+});
+</script> 
 </body></html>
