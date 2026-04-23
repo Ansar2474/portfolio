@@ -29,12 +29,21 @@
 
 .u-section-1 .u-btn-1 {
   --radius: 50px;
+  background-image: linear-gradient(90deg, #478ac9, #5ca9ff);
+  border: 0;
+  color: #ffffff !important;
   text-transform: uppercase;
   font-size: 1.25rem;
   letter-spacing: 1px;
   font-weight: 700;
   margin: 58px auto 53px 271px;
   padding: 23px 39px 23px 37px;
+  box-shadow: 0 12px 26px rgba(71, 138, 201, 0.28);
+}
+
+.u-section-1 .u-btn-1:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px rgba(71, 138, 201, 0.34);
 }
 
 @media (max-width: 1199px) {
@@ -146,54 +155,51 @@
 }
 
 /* ===== Visual refresh (append at end) ===== */
-:root{
-  --accent: #28ffd4;
-  --accent-2: #5ca9ff;
-  --bg-dark: #0f1a24;
-  --card-bg: rgba(255,255,255,0.06);
-  --card-border: rgba(255,255,255,0.14);
+:root {
+  --accent: #478ac9;
+  --accent-2: #6fb3f2;
+  --card-bg: rgba(255, 255, 255, 0.06);
+  --card-border: rgba(255, 255, 255, 0.15);
+  --heading-font: "Montserrat", "Open Sans", sans-serif;
 }
 
-/* smooth transitions globally */
-*{
+* {
   transition: transform .25s ease, box-shadow .25s ease, background-color .25s ease, color .25s ease;
 }
 
-/* HERO polish */
-.u-section-1{
+.u-section-1 {
   position: relative;
   isolation: isolate;
 }
-.u-section-1::before{
+
+.u-section-1::before {
   content: "";
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: linear-gradient(110deg, rgba(15,26,36,.75) 12%, rgba(15,26,36,.35) 45%, rgba(15,26,36,.15) 100%);
+  background: linear-gradient(110deg, rgba(15, 26, 36, .75) 12%, rgba(15, 26, 36, .35) 45%, rgba(15, 26, 36, .15) 100%);
 }
-.u-section-1 .u-sheet-1{
+
+.u-section-1 .u-sheet-1 {
   position: relative;
   z-index: 1;
 }
 
-/* Section rhythm */
 .u-section-2,
-.u-section-3{
+.u-section-3 {
   padding-top: 28px;
   padding-bottom: 28px;
 }
 
-/* Card look for services + testimonials */
 .u-section-2 .u-list-item-1,
 .u-section-2 .u-list-item-2,
 .u-section-2 .u-list-item-3,
 .u-section-3 .u-list-item-1,
 .u-section-3 .u-list-item-2,
-.u-section-3 .u-list-item-3{
+.u-section-3 .u-list-item-3 {
   background: var(--card-bg);
   border: 1px solid var(--card-border);
-  box-shadow: 0 10px 30px rgba(0,0,0,.22);
-  backdrop-filter: blur(4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, .2);
 }
 
 .u-section-2 .u-list-item-1:hover,
@@ -201,46 +207,152 @@
 .u-section-2 .u-list-item-3:hover,
 .u-section-3 .u-list-item-1:hover,
 .u-section-3 .u-list-item-2:hover,
-.u-section-3 .u-list-item-3:hover{
+.u-section-3 .u-list-item-3:hover {
   transform: translateY(-6px);
-  box-shadow: 0 16px 38px rgba(40,255,212,.20);
-  border-color: rgba(40,255,212,.45);
+  box-shadow: 0 16px 32px rgba(71, 138, 201, .26);
+  border-color: rgba(111, 179, 242, .55);
 }
 
-/* Better heading emphasis */
+/* Center and restyle Services + Testimonials titles */
 .u-section-2 .u-text-1,
-.u-section-3 .u-text-1{
-  letter-spacing: .4px;
-  text-shadow: 0 2px 16px rgba(40,255,212,.18);
+.u-section-3 .u-text-1 {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: var(--heading-font);
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #f9f6f0;
+  text-shadow: 0 6px 20px rgba(0, 0, 0, .35);
 }
 
-/* CTA buttons */
-.u-btn-1{
+/* Match service card spacing with testimonials */
+.u-section-2 .u-repeater-1,
+.u-section-3 .u-repeater-1 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-gap: 10px;
+  gap: 10px;
+}
+
+/* Keep service action aligned at bottom center in every card */
+.u-section-2 .u-container-layout-1,
+.u-section-2 .u-container-layout-2,
+.u-section-2 .u-container-layout-3 {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.u-section-2 .u-text-3,
+.u-section-2 .u-text-5,
+.u-section-2 .u-text-7 {
+  margin-bottom: 0;
+}
+
+/* Service icons: reduce size and keep balanced padding */
+.u-section-2 .u-icon {
+  width: 84px;
+  height: 84px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.u-section-2 .u-icon img {
+  object-fit: contain;
+  padding: 14px;
+}
+
+/* Make all service "learn more" buttons identical and centered */
+.u-section-2 .u-btn-1,
+.u-section-2 .u-btn-2,
+.u-section-2 .u-btn-3 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 132px;
+  margin: auto auto 0;
+  padding: 11px 18px;
+  border: 1px solid rgba(255, 255, 255, .25) !important;
+  border-radius: 999px;
   background-image: linear-gradient(90deg, var(--accent), var(--accent-2));
-  color: #06121b !important;
-  border: 0;
-  box-shadow: 0 10px 24px rgba(40,255,212,.26);
-}
-.u-btn-1:hover{
-  transform: translateY(-2px);
-  box-shadow: 0 14px 30px rgba(40,255,212,.35);
+  color: #ffffff !important;
+  font-family: var(--heading-font);
+  font-size: .92rem;
+  font-weight: 700;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  box-shadow: 0 8px 18px rgba(71, 138, 201, .25);
+  text-decoration: none;
 }
 
-/* testimonial spacing tuned (small but clean) */
-.u-section-3 .u-repeater-1{
-  --gap: 10px;
+.u-section-2 .u-btn-1:hover,
+.u-section-2 .u-btn-2:hover,
+.u-section-2 .u-btn-3:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(71, 138, 201, .32);
 }
-@media (max-width: 1199px){
-  .u-section-3 .u-repeater-1{
+
+/* Center the contact button below testimonials */
+.u-section-3 .u-btn-1 {
+  display: table;
+  margin: 26px auto 0;
+  padding: 13px 30px;
+  border: 1px solid rgba(255, 255, 255, .25);
+  border-radius: 999px;
+  background-image: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: #ffffff !important;
+  font-family: var(--heading-font);
+  font-weight: 800;
+  letter-spacing: .7px;
+  text-transform: uppercase;
+  box-shadow: 0 10px 24px rgba(71, 138, 201, .28);
+}
+
+.u-section-3 .u-btn-1:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(71, 138, 201, .35);
+}
+
+@media (max-width: 1199px) {
+  .u-section-2 .u-repeater-1,
+  .u-section-3 .u-repeater-1 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-gap: 10px;
   }
 }
 
-/* Mobile balance */
-@media (max-width: 575px){
+@media (max-width: 991px) {
+  .u-section-2 .u-repeater-1,
+  .u-section-3 .u-repeater-1 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-2 .u-repeater-1,
+  .u-section-3 .u-repeater-1 {
+    grid-template-columns: 1fr;
+  }
+
+  .u-section-2 .u-btn-1,
+  .u-section-2 .u-btn-2,
+  .u-section-2 .u-btn-3 {
+    min-width: 138px;
+    margin-top: 16px;
+  }
+}
+
+@media (max-width: 575px) {
   .u-section-2,
-  .u-section-3{
+  .u-section-3 {
     padding-top: 18px;
     padding-bottom: 18px;
+  }
+
+  .u-section-2 .u-icon {
+    width: 72px;
+    height: 72px;
   }
 }
