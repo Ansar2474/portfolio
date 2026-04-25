@@ -577,6 +577,14 @@ body {
   letter-spacing: .6px;
   text-transform: uppercase;
   color: #0e4067 !important;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.u-section-2 .u-text-3,
+.u-section-2 .u-text-5,
+.u-section-2 .u-text-7 {
+  margin-top: 0;
 }
 
 .u-section-2 .u-list-item-1,
