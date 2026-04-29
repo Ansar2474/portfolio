@@ -971,11 +971,15 @@ body {
 }
 
 /* Footer Styles */
+.u-footer .u-sheet-1 {
+  min-height: auto !important;
+}
+
 .u-footer {
   position: relative;
   background: transparent;
   /* reduced padding to tighten gap above and below footer content */
-  padding: 12px 20px 4px;
+  padding: 12px 20px 4px !important;
 }
 
 .u-footer .u-text-1 {
