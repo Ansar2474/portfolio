@@ -617,3 +617,61 @@
   background-size: 44px 78px;
   background-position: center;
 }
+
+/* Unified footer alignment across pages */
+.u-footer {
+  padding: 12px 18px 10px !important;
+}
+
+.u-footer .u-sheet-1 {
+  width: 100%;
+  max-width: 1140px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.u-footer .footer-points,
+.u-footer .footer-contact-pill {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.u-footer .footer-social-row {
+  margin-bottom: 10px !important;
+  padding-bottom: 2px;
+}
+
+@media (max-width: 767px) {
+  .u-footer {
+    padding: 12px 10px 10px !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-footer .u-sheet-1 {
+    padding: 16px 14px 14px !important;
+  }
+
+  .u-footer .footer-points {
+    width: 100%;
+  }
+
+  .u-footer .footer-contact-pill {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    border-radius: 22px;
+  }
+
+  .u-footer .footer-contact-phone,
+  .u-footer .footer-contact-mail {
+    justify-content: center;
+  }
+
+  .u-footer .footer-social-row {
+    margin-bottom: 12px !important;
+  }
+}
