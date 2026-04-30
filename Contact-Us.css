@@ -1,3 +1,7 @@
+:root {
+  --heading-font: "Montserrat", "Open Sans", sans-serif;
+}
+
 .u-section-1 {
   background-image: url('images/1773119782823.png');
   background-position: center;
@@ -387,6 +391,45 @@
     margin-top: 0;
     margin-left: 0;
   }
+}
+
+.u-footer {
+  background-color: transparent !important;
+  background-image: none !important;
+  position: relative;
+  color: #243b53;
+}
+
+.u-footer .u-text,
+.u-footer .u-headline a,
+.u-footer .u-btn,
+.u-footer .u-button-link,
+.u-footer a {
+  color: #2a4963 !important;
+}
+
+.u-footer .u-btn:hover,
+.u-footer .u-button-link:hover,
+.u-footer a:hover {
+  color: #3d88d1 !important;
+}
+
+.u-footer .u-headline a {
+  color: #1f5f96 !important;
+}
+
+.u-footer .u-btn-1 {
+  color: #245f88 !important;
+}
+
+.u-footer .u-btn-2 {
+  color: #2f6d9b !important;
+  border-color: rgba(47, 109, 155, 0.45) !important;
+}
+
+.u-section-3 .u-sheet-1,
+.u-footer .u-sheet-1 {
+  background: transparent !important;
 }
 
 /* Footer Styles */
