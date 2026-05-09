@@ -1202,6 +1202,10 @@ body {
 }
 
 @media (max-width: 575px) {
+  .u-section-3 .u-text-10 {
+    margin-bottom: 8px !important;
+  }
+
   .u-footer .u-sheet-1 {
     padding: 16px 14px 14px !important;
   }
